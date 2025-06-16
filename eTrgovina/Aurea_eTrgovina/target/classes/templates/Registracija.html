@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registracija</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-list">
+        <a class="brand">AUREA</a>
+    </div>
+</nav>
+<div class="reg_container">
+    <div class="reg_card">
+        <h2>Registracija</h2>
+        <form th:action="@{/users/new}" th:object="${user}" method="post">
+            <div class="reg_form-group">
+                <label for="ime">Ime:</label>
+                <input th:field="*{ime}" type="text" id="ime" placeholder="Unesite ime" required>
+            </div>
+            <div class="reg_form-group">
+                <label for="email">Email</label>
+                <input th:field="*{email}" type="email" id="email" placeholder="Unesite email" required>
+            </div>
+            <div class="reg_form-group">
+                <label for="password">Password</label>
+                <input th:field="*{password}" type="password" id="password" placeholder="Unesite sifru" required>
+            </div>
+            <button class="reg_btn" type="submit">Registracija</button>
+        </form>
+        <div class="reg_already-have-account">
+            <p>Vec imate profil?</p>
+            <a class="reg_login-button" th:href="@{/Login}">Log In</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

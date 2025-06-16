@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Proizvodi</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-list">
+        <a class="brand">Admin Dashboard</a>
+        <a class="dugme" th:href="@{/Login}">Login</a>
+        <a class="dugme" th:href="@{/Registracija}">Register</a>
+        <a class="dugme" th:href="@{/Admin/AdminDashboard}">Pocetna</a>
+        <a class="dugme" th:href="@{/Admin/Korisnici}">Edit korisnici</a>
+        <a class="dugme" th:href="@{/Admin/Proizvodi}">Edit proizvodi</a>
+    </div>
+</nav>
+
+
+<div class="product-container">
+    <h1 class="product-title">Lista proizvoda</h1>
+    <div class="actions">
+        <a href="/Admin/AdminDashboard/product/new" class="product-btn product-btn-primary">Dodaj novi proizvod</a>
+    </div>
+    <table class="product-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Naziv</th>
+            <th>Cijena</th>
+            <th>Operacije</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${product}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+            <td>
+                <a th:href="@{/Admin/AdminDashboard/product/edit/{id}(id=${product.id})}" class="product-btn product-btn-secondary">Izmijeni</a>
+                <a th:href="@{/Admin/AdminDashboard/product/delete/{id}(id=${product.id})}" class="product-btn product-btn-danger">Obriši</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

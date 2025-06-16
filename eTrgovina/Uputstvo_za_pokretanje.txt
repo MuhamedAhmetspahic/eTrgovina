@@ -1,0 +1,7 @@
+Postavljanje i pokretanje aplikacije cemo izvrsiti na nacin:
+1. Pokretanje projekta putem Intellij razvojnog okruzenja
+2. Instalirati Maven dependencies(pom.xml)
+3. Pokrenuti SQL skriptu pod nazivom aurea_baza_skripta.sql
+4. Ova skripta ce generistai bazu i tabele i postavit ce sample podatke: porizvodi, korisnici i uloge.
+5. Postoje 2 vrste korisnika koje ce se generisati pokretanjem skripte
+Admin (Gmail: admin@gmail.com, Password: 123456) i User (Gmail: user@gmail.com, Password: 123456)

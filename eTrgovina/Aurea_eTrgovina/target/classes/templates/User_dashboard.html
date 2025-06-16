@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-list">
+    <a class="dugme" th:href="@{/Login}">Login</a>
+    <a class="dugme" th:href="@{/Registracija}">Registracija</a>
+    <a class="dugme" th:href="@{/UserDashboard}">Pocetna</a>
+    <a class="brand">AUREA</a>
+    <a class="dugme">O nama</a>
+    <a class="dugme">Moja korpa</a>
+    <form th:action="@{/logout}" method="post" style="display:inline;">
+      <button class="logout-dugme" type="submit">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<section id="products" class="products-section">
+  <div class="product-grid">
+    <div th:each="product : ${products}" class="product-card">
+      <img th:src="${product.imageUrl}" class="product-img" alt="Stolica">
+      <h3 th:text="${product.name}"></h3>
+      <p th:text="'Cijena: ' + ${product.price} + ' KM'"></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="contact-section">
+  <h3>Kontakt informacije</h3>
+  <p>Telefon: +387 62 473 096</p>
+  <p>Email: kontakt@aurea.com</p>
+  <p>Adresa: Fakultetska 12, Zenica</p>
+</footer>
+
+
+</body>
+</html>
