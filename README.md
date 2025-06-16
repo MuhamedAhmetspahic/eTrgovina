@@ -1,2 +1,3 @@
 # eTrgovina
-SpringBoot projekat eTrgovine.
+Spring Boot projekat eTrgovine, konkretno u ovom projektu namijenjene za prodaju namještaja. Ova eTrgovina omogućava pregled sadržaja glavne tj. početne stranice za goste, kao i pregled za postojeće korisnike i naravno pregled za administratore (admin panel). 
+Posjetioci koji nemaju kreiran profil imaju mogućnost da gledaju ponudu, ali ne i da vrše kupovinu. Dok naravno postojeći korisnici imaju mogućnost dodavanja proizvoda u korpu i na taj način vrše kupovinu. Na admin panelu, administrator ima mogućnost da dodaje, briše te uređuje proizvode, kao što je promjena slike, cijene, naziva i opisa. Svaki posjetioc ima mogućnost da kreira profil ili da se prijavi ukoliko već posjeduje isti.
